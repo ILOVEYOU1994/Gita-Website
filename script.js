@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
             let chapterElement = document.createElement("div");
             chapterElement.classList.add("chapter-box");
             chapterElement.innerHTML = `<strong>Chapter ${index + 1}: ${chapter.name}</strong><br>${chapter.description}`;
+            chapterElement.addEventListener("click", function() {
+                window.location.href = `chapters/chapter${index + 1}_index.html`;
+            });
             container.appendChild(chapterElement);
         });
     })
